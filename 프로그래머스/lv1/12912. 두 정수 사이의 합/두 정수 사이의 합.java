@@ -1,19 +1,21 @@
 class Solution {
     public long solution(int a, int b) {
         long answer = 0;
+        int start = 0;
+        int end = 0;
         
         if(a > b) {
-            for(int i = b; i <= a; i++) {
-                answer += i;
-            }
-            
-        } else if (a < b) {
-            for(int i = a; i <= b; i++) {
-                answer += i;
-            }
+            start = b;
+            end = a;
         } else {
-            answer = a;
+            start = a;
+            end = b;
         }
+
+        for(int i = start; i <= end; i++) {
+            answer += i;
+        }
+        
         return answer;
     }
 }
