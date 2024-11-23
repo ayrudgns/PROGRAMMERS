@@ -4,13 +4,7 @@ class Solution {
     public String solution(String[] seoul) {
         String answer = "";
         
-        int idx = 0;
-        for(int i = 0; i < seoul.length; i++) {
-            if(seoul[i].equals("Kim")) {
-                idx = i;
-                break;
-            }
-        }
+        int idx = Arrays.asList(seoul).indexOf("Kim");
         
         answer = "김서방은 " + idx + "에 있다";
         
